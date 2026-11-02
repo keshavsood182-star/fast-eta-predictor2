@@ -1,0 +1,10 @@
+{
+  "outputDirectory": "frontend",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{backend/**,zomato_fast_eta_model.joblib,zomato_fast_eta_metadata.json}",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [{ "source": "/api/:path*", "destination": "/api/index.py" }]
+}
